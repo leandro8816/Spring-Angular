@@ -1,0 +1,38 @@
+
+  
+
+<div class="event-container">
+    <h2>Lista de Eventos</h2>
+    <ul class="event-list">
+        @for(post of data; track post.id){
+        <li class="event-item">
+        <div class="event-name">{{ post.name }}</div>
+        <div class="event-details">
+            <p><strong>Descrição:</strong> {{ post.description }}</p>
+            <p><strong>Data e Hora:</strong> {{ post.dateTime }}</p>
+            <p><strong>Localização:</strong> {{ post.location }}</p>
+            <p><strong>Organizador:</strong> {{ post.organizer }}</p>
+            <img [src]="post.image" alt="Imagem do evento" class="event-image"/>
+        </div>
+        </li>}
+    </ul>
+
+    
+    <button>Adicionar Novo Evento</button>
+
+    <!-- comentário <form (ngSubmit)="addEvent()">
+      <label>
+        Título:
+        <input type="text" [(ngModel)]="newEvent.title" name="title" required />
+      </label>
+      <label>
+        Data:
+        <input type="date" [(ngModel)]="newEvent.date" name="date" required />
+      </label>
+      <label>
+        Localização:
+        <input type="text" [(ngModel)]="newEvent.location" name="location" required />
+      </label>
+      <button type="submit">Adicionar Evento</button>
+    </form>-->
+  </div>

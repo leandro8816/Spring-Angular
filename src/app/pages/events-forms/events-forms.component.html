@@ -1,0 +1,35 @@
+
+<p>signup works!</p>
+
+
+<form [formGroup]="eventForm"(ngSubmit)="onSubmit()"  enctype="multipart/form-data">
+    <div>
+      <label for="name">Nome do Evento:</label>
+      <input type="text" id="name" formControlName="name" required />
+    </div>
+    
+    <div>
+      <label for="description">Descrição:</label>
+      <textarea id="description" formControlName="description" required></textarea>
+    </div>
+    <div>
+      <label for="datetime">dateTime:</label>
+      <textarea id="datetime" formControlName="datetime" required></textarea>
+    </div>
+    <div>
+      <label for="location">location:</label>
+      <textarea id="location" formControlName="location" required></textarea>
+    </div>
+    <div>
+      <label for="organizer">organizer:</label>
+      <textarea id="organizer" formControlName="organizer" required></textarea>
+    </div>
+    
+    <div>
+      <label for="image">Imagem do Evento:</label>
+      <input type="file" id="image" (change)="onImageSelected($event)" required />
+    </div>
+  
+    <button type="submit" [disabled]="eventForm.invalid">Criar Evento</button>
+  </form>
+  

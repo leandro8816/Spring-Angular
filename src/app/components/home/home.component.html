@@ -1,0 +1,13 @@
+<div class="home">
+    <div class="event-container">
+        @for(event of data; track event.id) {
+      <div class="card" >
+        <img [src]="event.image" alt="Imagem do evento" class="event-image"/>
+        <div class="card-body">
+          <h3 class="card-title">{{ event.name }}</h3>
+          <p class="card-description">{{ event.description }}</p>
+          <button class="btn-details" (click)="viewDetails(event.id)">Ver Detalhes</button>
+        </div>
+      </div>}
+    </div>
+  </div>

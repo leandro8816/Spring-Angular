@@ -1,0 +1,35 @@
+<div class="user-list">
+  <h2>Lista de Utilizadores</h2>
+  
+  <!-- Botão para adicionar novo utilizador -->
+  <button class="add-user" (click)="addUser()">Adicionar Novo Utilizador</button>
+  
+  <!-- Tabela de utilizadores -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Primeiro Nome</th>
+        <th>Último Nome</th>
+        <th>Email</th>
+        <th>Função</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(user of users; track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td class="acoes">
+          <button class="edit" (click)="editUser(user.id)">Editar</button>
+          <button class="delete" (click)="deleteUser(user.id)">Eliminar</button>
+        </td>
+        <img [src]="user.image" alt="Imagem do evento" class="event-image"/>
+      </tr>}
+    </tbody>
+  </table>
+</div>

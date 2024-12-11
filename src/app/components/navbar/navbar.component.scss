@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline;
+  align-items: center; /* Alinha o ícone e o texto */
+}
+
+.navbar a i {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #ff9800;
+}
+
+@media (max-width: 768px) {
+  .navbar li {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar li {
+    margin-right: 10px;
+  }
+}

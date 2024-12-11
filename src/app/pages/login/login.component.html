@@ -1,0 +1,14 @@
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form [formGroup]="profileForm">
+
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="email">
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="password">
+
+    </form>
+    <button (click)="onLogin()">login</button>
+
+</div>

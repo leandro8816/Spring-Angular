@@ -1,0 +1,74 @@
+/* Estilos Gerais do Formulário */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    /* Espaçamento e Alinhamento dos Elementos */
+    div {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Estilos para os Rótulos */
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+  
+    /* Estilos para os Campos de Entrada e Textarea */
+    input[type="text"],
+    input[type="file"],
+    textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.3s ease;
+  
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+  
+    /* Estilos para o Botão */
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  /* Responsividade para Telas Pequenas */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  

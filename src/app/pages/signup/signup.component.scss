@@ -1,0 +1,15 @@
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875em;
+  }
+  
+  .form-control.ng-touched.ng-invalid {
+    border-color: red;
+  }
+  

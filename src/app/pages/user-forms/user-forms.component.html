@@ -1,0 +1,14 @@
+<div class="user-form">
+    <h2>Editar Utilizador</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label for="name">Nome:</label>
+      <input id="name" formControlName="name" type="text" />
+  
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+  
+      <!-- Outros campos podem ser adicionados aqui -->
+  
+      <button type="submit" >Salvar</button>
+    </form>
+  </div>
